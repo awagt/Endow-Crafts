@@ -1,0 +1,93 @@
+# The four service cards. Edit in Pages CMS: "Services".
+
+- eyebrow: For individuals
+  title: Personalized Gifts
+  text: Customized gifts designed around the recipient and the occasion.
+  examples:
+  - Mugs
+  - Tumblers
+  - Shirts
+  - Cushions
+  - Crystal gifts
+  - Glassware
+  - Accessories
+  - Name gifts
+  - Custom keepsakes
+  button_text: Create Something Personal
+  button_link: '#contact'
+  form_service: Personalized Gift
+  portfolio_filter: ''
+  highlight: false
+  badge: ''
+  note: ''
+  image: ''
+  alt: Personalized gifts Qatar — custom name cushion
+  placeholder: cushion:blush:225:S
+- eyebrow: For businesses
+  title: Corporate Gifting
+  text: Professional customized gifting for companies, teams, clients and events.
+  examples:
+  - Corporate gift sets
+  - Employee gifts
+  - Client appreciation
+  - Branded merchandise
+  - Event giveaways
+  - Promotional products
+  - Custom packaging
+  - Bulk orders
+  - Logo personalization
+  button_text: Corporate Enquiries
+  button_link: '#corporate'
+  form_service: ''
+  portfolio_filter: ''
+  highlight: false
+  badge: ''
+  note: ''
+  image: ''
+  alt: Corporate gifts Qatar — engraved crystal award
+  placeholder: crystal:graphite:225
+- eyebrow: For celebrations
+  title: Event & Party Favors
+  text: Birthdays, weddings, baby celebrations, school and corporate events, religious and national occasions, and theme parties.
+  examples:
+  - Goodie bags
+  - Party favors
+  - Personalized cups
+  - Custom labels
+  - Cake toppers
+  - Event signage
+  - Themed accessories
+  - Guest gifts
+  button_text: Plan Your Event
+  button_link: '#contact'
+  form_service: Event & Party Favors
+  portfolio_filter: ''
+  highlight: false
+  badge: ''
+  note: ''
+  image: ''
+  alt: Party favors Qatar — personalized party cups
+  placeholder: cups:blush:225
+- eyebrow: Technique & tools
+  title: Cricut & Creative Crafting
+  text: We pair creative design with modern cutting, crafting and personalization technology to make detailed, precise custom pieces.
+  examples:
+  - Vinyl personalization
+  - Heat-transfer designs
+  - Paper crafts
+  - Custom stickers
+  - Labels
+  - Invitations
+  - Event décor
+  - Personalized apparel
+  - Creative workshops
+  button_text: Explore Cricut Creativity
+  button_link: '#portfolio'
+  form_service: ''
+  portfolio_filter: cricut
+  highlight: true
+  badge: Cricut Brand Ambassador — Qatar
+  note: Endow Crafts is an independent studio and a Cricut Brand Ambassador for Qatar. We are not owned or operated by Cricut. Cricut® is a trademark of Cricut, Inc.
+  image: ''
+  alt: Cricut Qatar — custom cut stickers and labels
+  placeholder: stickers:sage:225

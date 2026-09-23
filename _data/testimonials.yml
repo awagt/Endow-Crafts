@@ -1,0 +1,14 @@
+# Client reviews. Only publish real reviews, with the client's permission. Edit in Pages CMS: "Testimonials".
+
+- quote: Replace this with a real review from a personal-gift client — what they ordered, how it looked when it arrived, and how it was received.
+  name: Client Name
+  project: Personalized gift · Occasion
+  placeholder_label: true
+- quote: Replace this with a real review from a corporate client — the brief, the quantity, and how the team or their clients responded.
+  name: Client Name, Company
+  project: Corporate gifting · Project
+  placeholder_label: true
+- quote: Replace this with a real review from an event client — the celebration, the favors or décor, and what guests remembered.
+  name: Client Name
+  project: Event favors · Occasion
+  placeholder_label: true

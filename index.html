@@ -1,0 +1,530 @@
+---
+layout: null
+# This page is built from the files in the _data folder.
+# To change text or photos, use Pages CMS — you don't need to edit this file.
+---
+{%- assign s = site.data.settings -%}
+{%- assign h = site.data.home -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ s.seo_title }}</title>
+<meta name="description" content="{{ s.seo_description | escape }}">
+<meta name="keywords" content="{{ s.seo_keywords | escape }}">
+<meta property="og:title" content="{{ s.seo_title | escape }}">
+<meta property="og:description" content="{{ s.seo_description | escape }}">
+<meta property="og:type" content="website">
+{%- assign og = h.hero.images[0].image | strip -%}
+{%- if og != "" %}
+<meta property="og:image" content="{{ og | escape }}">
+{%- endif %}
+<meta name="theme-color" content="#23272B">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":{{ s.business_name | jsonify }},"legalName":{{ s.registered_name | jsonify }},
+"description":{{ s.seo_description | jsonify }},"email":{{ s.email | jsonify }},"telephone":"+{{ s.whatsapp_number }}","areaServed":"Qatar",
+"address":{"@type":"PostalAddress","addressCountry":"QA","addressLocality":"Doha"}}
+</script>
+</head>
+<body>
+{%- unless site.data.settings %}
+<div style="background:#A13A2F;color:#fff;padding:16px 20px;font:600 15px/1.5 system-ui,sans-serif">Setup problem: the website's content files were not found. The folders <code>_data</code> and <code>assets</code> and the file <code>index.html</code> must be at the top level of the GitHub repository, not inside another folder.</div>
+{%- endunless %}
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4-2-1-1 .8c-1-.4-1.8-1.2-2.2-2.2l.8-1-1-2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 8H17V4.5h-2.5A3.5 3.5 0 0 0 11 8v2.5H8.5V14H11v6.5h3.5V14H17l.5-3.5h-3V8.8c0-.5.3-.8 1-.8z"/></symbol>
+    <symbol id="i-tt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.4 2.6 2.2 4.4 5 4.6"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3l2.2 5.6L20 9.3l-4.5 3.9L17 19l-5-3.1L7 19l1.5-5.8L4 9.3l5.8-.7z"/></symbol>
+    <symbol id="w-personal" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17.5V6h11.5L27 16.5 16.5 27z"/><circle cx="11" cy="11.5" r="2"/><path d="M14 19.5l5-5"/></symbol>
+    <symbol id="w-purpose" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="11"/><path d="M20.5 11.5 18 18l-6.5 2.5L14 14z"/></symbol>
+    <symbol id="w-craft" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="23.5" r="3.5"/><circle cx="23.5" cy="23.5" r="3.5"/><path d="M11 21 25 5M21 21 7 5"/></symbol>
+    <symbol id="w-corporate" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="24" height="16" rx="2"/><path d="M12 10V7a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v3M4 17h24"/><path d="M14.5 17v2h3v-2"/></symbol>
+    <symbol id="w-qatar" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 27h24"/><path d="M7 27V16h4v11M13 27V9c0-2 1.5-4 3-5 1.5 1 3 3 3 5v18M21 27V13h4v14"/></symbol>
+    <symbol id="w-detail" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="14" r="8"/><path d="M20 20l7 7"/><path d="M14 10v8M10 14h8"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap head-in">
+    <a class="brand" href="#top" aria-label="{{ s.business_name | escape }} — home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="5.5" y="5.5" width="29" height="29" rx="3" transform="rotate(45 20 20)" fill="none" stroke="var(--copper)" stroke-width="1.2"/>
+        <text x="20" y="26.5" text-anchor="middle" font-family="Bodoni Moda, Didot, Georgia, serif" font-style="italic" font-size="19" fill="var(--ink)">E</text>
+      </svg>
+      <span><span class="brand-name">{{ s.business_name }}</span><span class="brand-sub">Personalization Studio · {{ s.location }}</span></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#corporate">Corporate</a>
+      <a href="#workshops">Workshops</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-primary" href="#contact">Request a Quote</a>
+    </nav>
+    <div class="head-cta">
+      <a class="btn btn-wa btn-sm js-wa" href="https://wa.me/{{ s.whatsapp_number }}" target="_blank" rel="noopener" aria-label="WhatsApp Us"><svg><use href="#i-wa"/></svg><span class="lbl">WhatsApp Us</span></a>
+      <a class="btn btn-primary btn-sm" href="#contact">Request a Quote</a>
+      <button class="menu-btn" id="menuBtn" aria-controls="nav" aria-expanded="false" aria-label="Open menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ================= HERO ================= -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="hero-copy rv">
+      <span class="eyebrow">{{ h.hero.eyebrow }}</span>
+      <h1 id="hero-title">{{ h.hero.headline }} <em>{{ h.hero.headline_emphasis }}</em></h1>
+      <p class="lead">{{ h.hero.intro }}</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#portfolio">Explore Our Work <svg><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" href="#contact">Request a Quote</a>
+      </div>
+      {%- if h.hero.highlights.size > 0 %}
+      <div class="hero-meta">
+        {%- for b in h.hero.highlights %}
+        <span><i></i>{{ b }}</span>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+    </div>
+    <div class="collage rv" aria-label="A selection of {{ s.business_name | escape }} pieces">
+      {%- assign tl = "a,b,c,d,e" | split: "," -%}
+      {%- for t in h.hero.images limit: 5 %}
+      <div class="tile t-{{ tl[forloop.index0] }}">{%- assign _p = t.image | strip -%}{%- if _p != "" -%}{%- assign _f = _p | slice: 0 -%}{%- if _f == "/" -%}{%- assign _p = _p | slice: 1, 2000 -%}{%- endif -%}<img src="{{ _p | escape }}" alt="{{ t.alt | escape }}">{%- else -%}<img data-art="{{ t.placeholder | default: 'box:sand:500' | escape }}" alt="{{ t.alt | escape }}">{%- endif -%}</div>
+      {%- endfor %}
+      {%- if h.hero.caption_title and h.hero.caption_title != "" %}
+      <div class="placard"><b>{{ h.hero.caption_title }}</b>{{ h.hero.caption_text }}</div>
+      {%- endif %}
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATEMENT ================= -->
+<section class="statement" aria-label="Who we create for">
+  <div class="wrap">
+    <h2>{{ h.statement.heading }} <em>{{ h.statement.heading_emphasis }}</em></h2>
+    <div class="col rv"><h3>{{ h.statement.personal_title }}</h3><p>{{ h.statement.personal_text }}</p></div>
+    <div class="col rv"><h3>{{ h.statement.business_title }}</h3><p>{{ h.statement.business_text }}</p></div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="sec" id="about" aria-labelledby="about-title">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-copy rv">
+        <span class="eyebrow">About {{ s.business_name }}</span>
+        <h2 id="about-title">{{ h.about.heading }} <em>{{ h.about.heading_emphasis }}</em></h2>
+        <p class="lead">{{ h.about.lead }}</p>
+        {%- assign paras = h.about.story | newline_to_br | split: "<br />" %}
+        {%- for para in paras %}{% assign pt = para | strip %}{% if pt != "" %}
+        <p>{{ pt }}</p>{% endif %}{% endfor %}
+        <span class="reg">Operating under <b>{{ s.registered_name }}</b>, {{ s.location }}</span>
+      </div>
+      <aside class="custom-panel rv" aria-labelledby="custom-title">
+        <h3 id="custom-title">{{ h.about.customize_title }}</h3>
+        <div class="chips">
+          {%- for c in h.about.customize_items %}<span class="chip">{{ c }}</span>{% endfor -%}
+        </div>
+        <p class="muted" style="font-size:.92rem">{{ h.about.customize_note }}</p>
+        <a class="link-arrow" href="#contact" data-service="Personalized Gift">Customize Your Gift <svg><use href="#i-arrow"/></svg></a>
+      </aside>
+    </div>
+    <ol class="timeline rv" aria-label="How an idea becomes a gift">
+      {%- for st in h.about.timeline %}
+      <li><b>{{ st.title }}</b><span>{{ st.text }}</span>{% unless forloop.last %}<span class="arrow" aria-hidden="true">→</span>{% endunless %}</li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="sec services" id="services" aria-labelledby="svc-title">
+  <div class="wrap">
+    <div class="sec-head sec-head--split">
+      <div style="display:grid;gap:18px">
+        <span class="eyebrow">Services</span>
+        <h2 id="svc-title">What we <em>create</em></h2>
+      </div>
+      <p class="lead" style="max-width:44ch">{{ h.services_intro }}</p>
+    </div>
+    <div class="svc-grid">
+      {%- for sv in site.data.services %}
+      <article class="svc{% if sv.highlight %} svc--dark{% endif %} rv">
+        <div class="svc-img">{%- assign _p = sv.image | strip -%}{%- if _p != "" -%}{%- assign _f = _p | slice: 0 -%}{%- if _f == "/" -%}{%- assign _p = _p | slice: 1, 2000 -%}{%- endif -%}<img src="{{ _p | escape }}" alt="{{ sv.alt | escape }}" loading="lazy" decoding="async">{%- else -%}<img data-art="{{ sv.placeholder | default: 'box:sand:500' | escape }}" alt="{{ sv.alt | escape }}">{%- endif -%}</div>
+        <div class="svc-body">
+          {%- if sv.badge and sv.badge != "" %}
+          <span class="amb"><svg><use href="#i-star"/></svg>{{ sv.badge }}</span>
+          {%- else %}
+          <span class="eyebrow">{{ sv.eyebrow }}</span>
+          {%- endif %}
+          <h3>{{ sv.title }}</h3>
+          <p>{{ sv.text }}</p>
+          <ul class="tags">{% for e in sv.examples %}<li>{{ e }}</li>{% endfor %}</ul>
+          {%- assign link = sv.button_link | default: "#contact" %}
+          <a class="link-arrow" href="{{ link }}"{% if link == "#contact" and sv.form_service and sv.form_service != "" %} data-service="{{ sv.form_service | escape }}"{% endif %}{% if link == "#portfolio" and sv.portfolio_filter and sv.portfolio_filter != "" %} data-filter="{{ sv.portfolio_filter }}"{% endif %}>{{ sv.button_text }} <svg><use href="#i-arrow"/></svg></a>
+          {%- if sv.note and sv.note != "" %}
+          <p class="disclaim">{{ sv.note }}</p>
+          {%- endif %}
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXHIBITION ================= -->
+<section class="sec exhibit" id="portfolio" aria-labelledby="pf-title">
+  <div class="wrap">
+    <div class="sec-head sec-head--split">
+      <div style="display:grid;gap:18px">
+        <span class="eyebrow">The Exhibition</span>
+        <h2 id="pf-title">Selected <em>works</em></h2>
+      </div>
+      <p class="lead" style="max-width:44ch">{{ h.portfolio_intro }}</p>
+    </div>
+    <div class="filters" role="toolbar" aria-label="Filter the portfolio" id="filters">
+      <button class="filter" type="button" data-f="all" aria-pressed="true">All</button>
+      <button class="filter" type="button" data-f="personal" aria-pressed="false">Personalized Gifts</button>
+      <button class="filter" type="button" data-f="corporate" aria-pressed="false">Corporate</button>
+      <button class="filter" type="button" data-f="events" aria-pressed="false">Events &amp; Parties</button>
+      <button class="filter" type="button" data-f="cricut" aria-pressed="false">Cricut Creations</button>
+      <button class="filter" type="button" data-f="seasonal" aria-pressed="false">Seasonal</button>
+      <button class="filter" type="button" data-f="qatar" aria-pressed="false">Qatar Collection</button>
+      <button class="filter" type="button" data-f="kids" aria-pressed="false">Kids &amp; School</button>
+    </div>
+    <div class="masonry" id="gallery" aria-live="polite">
+      {%- for g in site.data.portfolio %}
+      {%- assign n = forloop.index | prepend: "00" | slice: -2, 2 %}
+      {%- capture alt %}{{ g.title }} — handmade by {{ s.business_name }}, Qatar{% endcapture %}
+      <figure class="piece" data-cats="{{ g.categories | join: ' ' }}" data-i="{{ forloop.index0 }}" data-no="{{ n }}">
+        <button type="button" aria-label="View {{ g.title | escape }}"><div class="frame">{%- assign _p = g.image | strip -%}{%- if _p != "" -%}{%- assign _f = _p | slice: 0 -%}{%- if _f == "/" -%}{%- assign _p = _p | slice: 1, 2000 -%}{%- endif -%}<img src="{{ _p | escape }}" alt="{{ alt | escape }}" loading="lazy" decoding="async">{%- else -%}<img data-art="{{ g.placeholder | default: 'box:sand:500' | escape }}" alt="{{ alt | escape }}">{%- endif -%}</div></button>
+        <figcaption><span class="no">No. {{ n }}</span><span class="ttl">{{ g.title }}</span><span class="med">{{ g.materials }}</span></figcaption>
+      </figure>
+      {%- endfor %}
+    </div>
+    <div class="exhibit-foot">
+      <p>Don't see exactly what you're imagining? Most of our work starts as something no one has asked for before.</p>
+      <a class="btn btn-primary" href="#contact">Request a Quote <svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COLLECTIONS ================= -->
+<section class="sec" id="collections" aria-labelledby="col-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Featured Collections</span>
+      <h2 id="col-title">Collections for every <em>kind of occasion</em></h2>
+    </div>
+    <div class="coll-grid">
+      {%- for c in site.data.collections %}
+      <article class="coll{% if forloop.index <= 2 %} coll--half{% endif %} rv">
+        <div class="coll-img">{%- assign _p = c.image | strip -%}{%- if _p != "" -%}{%- assign _f = _p | slice: 0 -%}{%- if _f == "/" -%}{%- assign _p = _p | slice: 1, 2000 -%}{%- endif -%}<img src="{{ _p | escape }}" alt="{{ c.alt | escape }}" loading="lazy" decoding="async">{%- else -%}<img data-art="{{ c.placeholder | default: 'box:sand:500' | escape }}" alt="{{ c.alt | escape }}">{%- endif -%}</div>
+        <div class="coll-meta"><h3>{{ c.title }}</h3><p>{{ c.text }}</p>
+        {%- if c.details and c.details != "" %}<p class="motifs">{{ c.details }}</p>{% endif %}
+        <button class="link-arrow" data-filter="{{ c.filter | default: 'all' }}">View pieces <svg><use href="#i-arrow"/></svg></button></div>
+      </article>
+      {%- endfor %}
+      <article class="seasonal rv">
+        <div class="coll-img">{%- assign _p = h.seasonal.image | strip -%}{%- if _p != "" -%}{%- assign _f = _p | slice: 0 -%}{%- if _f == "/" -%}{%- assign _p = _p | slice: 1, 2000 -%}{%- endif -%}<img src="{{ _p | escape }}" alt="{{ h.seasonal.alt | escape }}" loading="lazy" decoding="async">{%- else -%}<img data-art="{{ h.seasonal.placeholder | default: 'box:sand:500' | escape }}" alt="{{ h.seasonal.alt | escape }}">{%- endif -%}</div>
+        <div class="seasonal-copy">
+          <span class="eyebrow">Seasonal</span>
+          <h3 style="font-size:clamp(1.7rem,3vw,2.4rem)">{{ h.seasonal.heading }}</h3>
+          <p style="color:var(--ink-2)">{{ h.seasonal.text }}</p>
+          <div class="chips">{% for o in h.seasonal.occasions %}<span class="chip chip--line">{{ o }}</span>{% endfor %}</div>
+          <button class="link-arrow" data-filter="seasonal" style="justify-self:start">View seasonal pieces <svg><use href="#i-arrow"/></svg></button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CORPORATE ================= -->
+<section class="sec corp" id="corporate" aria-labelledby="corp-title">
+  <div class="wrap">
+    <div class="corp-top">
+      <div style="display:grid;gap:18px">
+        <span class="eyebrow">Corporate Gifting · {{ s.location }}</span>
+        <h2 id="corp-title">{{ h.corporate.heading }} <em>{{ h.corporate.heading_emphasis }}</em></h2>
+      </div>
+      <p class="lead">{{ h.corporate.intro }}</p>
+    </div>
+    <ol class="steps rv" aria-label="Corporate order process">
+      {%- for st in h.corporate.steps %}
+      <li><b>{{ st.title }}</b><span>{{ st.text }}</span></li>
+      {%- endfor %}
+    </ol>
+    <div class="corp-body">
+      <div class="corp-lists rv">
+        <div>
+          <h3>We shape each order around</h3>
+          <ul class="consider">
+            {%- for c in h.corporate.considerations %}
+            <li>{{ c.title }}<small>{{ c.text }}</small></li>
+            {%- endfor %}
+          </ul>
+        </div>
+        <div>
+          <h3>Corporate services</h3>
+          <ul class="incl">{% for c in h.corporate.services %}<li>{{ c }}</li>{% endfor %}</ul>
+        </div>
+      </div>
+      <div class="form-card rv">
+        <h3>Request a Corporate Proposal</h3>
+        <p>Tell us about the occasion — we'll come back with ideas, options and a quotation.</p>
+        <form class="form" id="corpForm" novalidate data-kind="Corporate proposal request">
+          <div class="field"><label for="k-company">Company Name <span class="req">*</span></label><input id="k-company" name="Company" required autocomplete="organization"><p class="err" id="k-company-err"></p></div>
+          <div class="field"><label for="k-person">Contact Person <span class="req">*</span></label><input id="k-person" name="Contact person" required autocomplete="name"><p class="err" id="k-person-err"></p></div>
+          <div class="field"><label for="k-email">Email <span class="req">*</span></label><input id="k-email" name="Email" type="email" required autocomplete="email"><p class="err" id="k-email-err"></p></div>
+          <div class="field"><label for="k-phone">Phone <span class="req">*</span></label><input id="k-phone" name="Phone" type="tel" required autocomplete="tel" placeholder="+974"><p class="err" id="k-phone-err"></p></div>
+          <div class="field"><label for="k-occasion">Event / Occasion</label><input id="k-occasion" name="Occasion" placeholder="e.g. National Day staff gifts"></div>
+          <div class="field"><label for="k-qty">Quantity</label><input id="k-qty" name="Quantity" type="number" min="1" inputmode="numeric" placeholder="Approx."><p class="err" id="k-qty-err"></p></div>
+          <div class="field"><label for="k-date">Required Date</label><input id="k-date" name="Required date" type="date"><p class="err" id="k-date-err"></p></div>
+          <div class="field"><label for="k-budget">Budget Range</label>
+            <select id="k-budget" name="Budget range"><option value="">Select a range</option><option>Under QAR 50 per piece</option><option>QAR 50–150 per piece</option><option>QAR 150–300 per piece</option><option>QAR 300+ per piece</option><option>Not sure yet</option></select></div>
+          <div class="field field--full"><label for="k-req">Requirements <span class="req">*</span></label><textarea id="k-req" name="Requirements" required placeholder="What would you like to give, to whom, and how should it reflect your brand?"></textarea><p class="err" id="k-req-err"></p></div>
+          <div class="field field--full"><label for="k-file">Upload Reference / Logo</label>
+            <div class="file"><svg><use href="#i-upload"/></svg><span id="k-file-lbl">Choose a file<small>Logo, brand guide or reference image</small></span><input id="k-file" name="Reference" type="file" accept="image/*,.pdf,.ai,.eps,.svg"></div></div>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Request a Corporate Proposal <svg><use href="#i-arrow"/></svg></button>
+            <p class="form-note">Your details open in WhatsApp, ready to send to our team.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WORKSHOPS ================= -->
+<section class="sec" id="workshops" aria-labelledby="ws-title">
+  <div class="wrap ws-grid">
+    <div class="ws-copy rv">
+      <span class="eyebrow">Workshops</span>
+      <h2 id="ws-title">{{ h.workshops.heading }} <em>{{ h.workshops.heading_emphasis }}</em></h2>
+      <p class="lead">{{ h.workshops.intro }}</p>
+      <div class="ws-img">{%- assign _p = h.workshops.image | strip -%}{%- if _p != "" -%}{%- assign _f = _p | slice: 0 -%}{%- if _f == "/" -%}{%- assign _p = _p | slice: 1, 2000 -%}{%- endif -%}<img src="{{ _p | escape }}" alt="{{ h.workshops.alt | escape }}" loading="lazy" decoding="async">{%- else -%}<img data-art="{{ h.workshops.placeholder | default: 'box:sand:500' | escape }}" alt="{{ h.workshops.alt | escape }}">{%- endif -%}</div>
+      <div class="btn-row"><a class="btn btn-primary" href="#contact" data-service="Workshop">Enquire About Workshops <svg><use href="#i-arrow"/></svg></a></div>
+    </div>
+    <ul class="ws-list rv">
+      {%- for w in site.data.workshops %}
+      <li><b>{{ w.title }}</b><p>{{ w.text }}</p>{% if w.audience and w.audience != "" %}<span class="aud">{{ w.audience }}</span>{% endif %}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- ================= WHY ================= -->
+<section class="sec why" id="why" aria-labelledby="why-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Why {{ s.business_name }}</span>
+      <h2 id="why-title">{{ h.why.heading }} <em>{{ h.why.heading_emphasis }}</em></h2>
+    </div>
+    <div class="why-grid">
+      {%- for w in h.why.items %}
+      <div class="why-item"><svg><use href="#w-{{ w.icon | default: 'personal' }}"/></svg><h3>{{ w.title }}</h3><p>{{ w.text }}</p></div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="sec" id="process" aria-labelledby="proc-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Our Process</span>
+      <h2 id="proc-title">From your idea to <em>ready to gift</em></h2>
+    </div>
+    <ol class="proc rv">
+      {%- for p in h.process %}
+      <li><span class="num">{{ forloop.index | prepend: "00" | slice: -2, 2 }}</span><h3>{{ p.title }}</h3><p>{{ p.text }}</p></li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+{%- if s.show_testimonials and site.data.testimonials.size > 0 %}
+<!-- ================= TESTIMONIALS ================= -->
+<section class="sec testi" id="testimonials" aria-labelledby="t-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Kind Words</span>
+      <h2 id="t-title">What our clients <em>say</em></h2>
+    </div>
+    <div class="t-grid">
+      {%- for t in site.data.testimonials %}
+      <figure class="t-card rv">
+        {%- if t.placeholder_label %}<span class="ph-tag">Placeholder</span>{% endif %}
+        <blockquote>{{ t.quote }}</blockquote>
+        <figcaption><b>{{ t.name }}</b><span>{{ t.project }}</span></figcaption>
+      </figure>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+<!-- ================= INSTAGRAM ================= -->
+{%- assign ig = s.instagram_url | strip | default: "#" %}
+<section class="sec" id="social" aria-labelledby="ig-title">
+  <div class="wrap">
+    <div class="sec-head sec-head--split">
+      <div style="display:grid;gap:18px">
+        <span class="eyebrow">{{ s.instagram_handle }}</span>
+        <h2 id="ig-title">Follow Our <em>Creative Journey</em></h2>
+      </div>
+      <a class="btn btn-primary" href="{{ ig }}" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>Follow {{ s.instagram_handle }}</a>
+    </div>
+    <div class="ig-grid">
+      {%- for p in site.data.instagram limit: 6 %}
+      {%- assign pl = p.link | strip | default: ig %}
+      <a href="{{ pl }}" target="_blank" rel="noopener" aria-label="Instagram post: {{ p.alt | escape }}">{%- assign _p = p.image | strip -%}{%- if _p != "" -%}{%- assign _f = _p | slice: 0 -%}{%- if _f == "/" -%}{%- assign _p = _p | slice: 1, 2000 -%}{%- endif -%}<img src="{{ _p | escape }}" alt="{{ p.alt | escape }}" loading="lazy" decoding="async">{%- else -%}<img data-art="{{ p.placeholder | default: 'box:sand:500' | escape }}" alt="{{ p.alt | escape }}">{%- endif -%}</a>
+      {%- endfor %}
+    </div>
+    <div class="socials">
+      <a class="soc" href="{{ ig }}" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>Instagram</a>
+      <a class="soc" href="{{ s.facebook_url | strip | default: '#' }}" target="_blank" rel="noopener"><svg><use href="#i-fb"/></svg>Facebook</a>
+      <a class="soc" href="{{ s.tiktok_url | strip | default: '#' }}" target="_blank" rel="noopener"><svg><use href="#i-tt"/></svg>TikTok</a>
+      <a class="soc js-wa" href="https://wa.me/{{ s.whatsapp_number }}" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="sec contact" id="contact" aria-labelledby="c-title">
+  <div class="wrap contact-grid">
+    <div class="contact-copy rv">
+      <span class="eyebrow">Contact</span>
+      <h2 id="c-title">{{ h.contact.heading }} <em>{{ h.contact.heading_emphasis }}</em></h2>
+      <p class="lead">{{ h.contact.intro }}</p>
+      <ul class="c-list">
+        <li class="c-item"><span class="ic"><svg><use href="#i-wa"/></svg></span><span><small>WhatsApp</small><span class="val">{{ s.phone_display }}</span></span><button class="copy" type="button" data-copy="{{ s.phone_display | escape }}"><svg><use href="#i-copy"/></svg>Copy</button></li>
+        <li class="c-item"><span class="ic"><svg><use href="#i-mail"/></svg></span><span><small>Email</small><span class="val">{{ s.email }}</span></span><button class="copy" type="button" data-copy="{{ s.email | escape }}"><svg><use href="#i-copy"/></svg>Copy</button></li>
+        <li class="c-item"><span class="ic"><svg><use href="#i-pin"/></svg></span><span><small>Studio</small><span class="val" style="user-select:text">{{ s.business_name }} · {{ s.location }}</span></span><span></span></li>
+      </ul>
+      <p class="muted" style="font-size:.88rem">Registered under <b style="color:var(--ink)">{{ s.registered_name }}</b>, {{ s.location }}</p>
+      <div class="btn-row">
+        <a class="btn btn-wa js-wa" href="https://wa.me/{{ s.whatsapp_number }}" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp Us</a>
+        <a class="btn btn-ghost" href="mailto:{{ s.email }}"><svg><use href="#i-mail"/></svg>Email Us</a>
+      </div>
+    </div>
+    <div class="form-card rv">
+      <h3>Request a Quote</h3>
+      <p>A few details help us come back with ideas and pricing quickly.</p>
+      <form class="form" id="contactForm" novalidate data-kind="Quote request">
+        <div class="field"><label for="c-name">Name <span class="req">*</span></label><input id="c-name" name="Name" required autocomplete="name"><p class="err" id="c-name-err"></p></div>
+        <div class="field"><label for="c-phone">Phone <span class="req">*</span></label><input id="c-phone" name="Phone" type="tel" required autocomplete="tel" placeholder="+974"><p class="err" id="c-phone-err"></p></div>
+        <div class="field"><label for="c-email">Email</label><input id="c-email" name="Email" type="email" autocomplete="email"><p class="err" id="c-email-err"></p></div>
+        <div class="field"><label for="c-service">Service Required <span class="req">*</span></label>
+          <select id="c-service" name="Service" required><option value="">Choose a service</option><option>Personalized Gift</option><option>Corporate Gifting</option><option>Event &amp; Party Favors</option><option>Cricut / Custom Crafting</option><option>Workshop</option><option>Something else</option></select><p class="err" id="c-service-err"></p></div>
+        <div class="field"><label for="c-occasion">Occasion</label><input id="c-occasion" name="Occasion" placeholder="e.g. Birthday, wedding, Eid"></div>
+        <div class="field"><label for="c-qty">Quantity</label><input id="c-qty" name="Quantity" type="number" min="1" inputmode="numeric"><p class="err" id="c-qty-err"></p></div>
+        <div class="field field--full"><label for="c-date">Preferred Date</label><input id="c-date" name="Preferred date" type="date"><p class="err" id="c-date-err"></p></div>
+        <div class="field field--full"><label for="c-msg">Message <span class="req">*</span></label><textarea id="c-msg" name="Message" required placeholder="Tell us about your idea — names, colours, theme, anything that matters."></textarea><p class="err" id="c-msg-err"></p></div>
+        <div class="field field--full"><label for="c-file">Upload Inspiration / Reference</label>
+          <div class="file"><svg><use href="#i-upload"/></svg><span id="c-file-lbl">Choose a file<small>A photo, sketch or screenshot of something you love</small></span><input id="c-file" name="Reference" type="file" accept="image/*,.pdf"></div></div>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Request a Quote <svg><use href="#i-arrow"/></svg></button>
+          <p class="form-note">Your details open in WhatsApp, ready to send to our team.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="brand-name">{{ s.business_name }}</span>
+        <span class="brand-sub">{{ s.tagline }}</span>
+        <p style="margin-top:18px">Registered under {{ s.registered_name }}<br>{{ s.location }}</p>
+        <div class="soc-row">
+          <a href="{{ ig }}" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+          <a href="{{ s.facebook_url | strip | default: '#' }}" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+          <a href="{{ s.tiktok_url | strip | default: '#' }}" target="_blank" rel="noopener" aria-label="TikTok"><svg><use href="#i-tt"/></svg></a>
+          <a class="js-wa" href="https://wa.me/{{ s.whatsapp_number }}" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#top">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#corporate">Corporate Gifting</a></li><li><a href="#workshops">Workshops</a></li><li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Get in touch</h3>
+        <ul>
+          <li>WhatsApp<br><a class="js-wa" href="https://wa.me/{{ s.whatsapp_number }}" target="_blank" rel="noopener">{{ s.phone_display }}</a></li>
+          <li style="margin-top:8px">Email<br><a href="mailto:{{ s.email }}">{{ s.email }}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>{{ s.copyright }}</span>
+      <span>Personalized gifts &amp; corporate gifting in Doha, Qatar</span>
+    </div>
+  </div>
+</footer>
+
+<div class="fab">
+  <button class="top" id="toTop" type="button" aria-label="Back to top" hidden><svg><use href="#i-up"/></svg></button>
+  <a class="wa js-wa" href="https://wa.me/{{ s.whatsapp_number }}" target="_blank" rel="noopener" aria-label="Chat with {{ s.business_name | escape }} on WhatsApp"><svg><use href="#i-wa"/></svg></a>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-labelledby="lb-title" hidden>
+  <div class="lb-panel">
+    <button class="lb-close" id="lbClose" type="button" aria-label="Close"><svg><use href="#i-close"/></svg></button>
+    <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Previous piece"><svg><use href="#i-left"/></svg></button>
+    <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Next piece"><svg><use href="#i-right"/></svg></button>
+    <div class="lb-img"><img id="lbImg" alt=""></div>
+    <div class="lb-info">
+      <span class="eyebrow" id="lbCat"></span>
+      <h3 id="lb-title"></h3>
+      <p id="lbDesc"></p>
+      <dl>
+        <div><dt>Customization options</dt><dd class="chips" id="lbOpts"></dd></div>
+        <div><dt>Occasion</dt><dd id="lbOcc"></dd></div>
+        <div><dt>Materials</dt><dd id="lbMed"></dd></div>
+      </dl>
+      <div class="btn-row">
+        <button class="btn btn-primary" id="lbReq" type="button">Request Similar <svg><use href="#i-arrow"/></svg></button>
+        <a class="btn btn-wa" id="lbWa" href="https://wa.me/{{ s.whatsapp_number }}" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Ask on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="application/json" id="site-settings">{"whatsapp":{{ s.whatsapp_number | jsonify }},"email":{{ s.email | jsonify }},"greeting":{{ s.whatsapp_greeting | jsonify }}}</script>
+<script type="application/json" id="portfolio-data">{{ site.data.portfolio | jsonify }}</script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Site settings for GitHub Pages (Jekyll).
+# Most content is edited in Pages CMS. You rarely need to touch this file.
+title: Endow Crafts
+description: Personalized gifts, corporate gifting, event favors and creative crafts in Qatar.
+# When the site has its own domain, put it here, e.g. url: "https://www.endowcrafts.com"
+url: ""
+plugins:
+  - jekyll-sitemap
+exclude:
+  - README.md
+  - OWNER-GUIDE.docx
+  - pages-cms-config.txt

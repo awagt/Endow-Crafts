@@ -1,0 +1,165 @@
+# Homepage text and images. Edit in Pages CMS: "Homepage".
+
+hero:
+  eyebrow: Creative personalization & gifting studio · Doha
+  headline: Crafted With Creativity.
+  headline_emphasis: Personalized For You.
+  intro: Personalized gifts, creative crafts, corporate gifting and memorable details — thoughtfully designed and crafted in Qatar.
+  highlights:
+  - Cricut Brand Ambassador — Qatar
+  - One special gift or a full corporate order
+  images:
+  - image: ''
+    alt: Personalized name tumbler, customized gifts in Doha
+    placeholder: tumbler:teal:560:Maryam
+  - image: ''
+    alt: Corporate client appreciation gift box, Qatar
+    placeholder: box:graphite:250:thank you
+  - image: ''
+    alt: Monogram ceramic mug, personalized gift
+    placeholder: mug:sand:400:A
+  - image: ''
+    alt: Etched wedding guest glassware, event favors Qatar
+    placeholder: glass:champagne:600
+  - image: ''
+    alt: Personalized initial cushion
+    placeholder: cushion:blush:200:N
+  caption_title: No. 01 — Name Tumbler
+  caption_text: Steel tumbler, vinyl name, colour of your choice
+statement:
+  heading: One special gift.
+  heading_emphasis: Or an entire event.
+  personal_title: For you & your family
+  personal_text: A single piece made around one name, one message and one moment — birthdays, weddings, new babies and everyday thank-yous.
+  business_title: For companies & events
+  business_text: Branded gift sets, giveaways and favors produced in quantity, with the same finish on the last piece as the first.
+about:
+  heading: Where Creativity Meets
+  heading_emphasis: Personalization
+  lead: Endow Crafts is a Qatar-based creative studio specializing in personalized gifts, handcrafted products, event favors, corporate gifting and creative solutions.
+  story: We believe the best gifts carry a little of the person who gave them. So we start with your idea — a name, a colour, a logo, a memory — and design every detail around it before anything is made. Handmade care meets modern cutting and personalization technology, so the result feels personal and looks polished, whether it is a single keepsake or several hundred pieces for an event.
+  customize_title: Every project is shaped around your…
+  customize_items:
+  - Theme
+  - Occasion
+  - Brand
+  - Color palette
+  - Name
+  - Message
+  - Event requirements
+  - Quantity
+  - Budget
+  customize_note: Not sure where to start? Share a photo, a Pinterest board or just a feeling — we'll help shape the rest.
+  timeline:
+  - title: Idea
+    text: Your occasion, story or brief
+  - title: Design
+    text: Layout, fonts and colours
+  - title: Personalize
+    text: Names, logos and messages
+  - title: Craft
+    text: Made and finished by hand
+  - title: Deliver
+    text: Ready to gift, across Qatar
+services_intro: Four ways we work with you — from a single keepsake to a full corporate or event programme.
+portfolio_intro: Every piece here was made for someone. Open any work to see how it can be personalized — then ask us for something similar.
+seasonal:
+  heading: Gifting through the year
+  text: Seasonal collections are designed ahead of each occasion — ask early for corporate and bulk quantities.
+  occasions:
+  - Ramadan
+  - Eid
+  - Qatar National Day
+  - Christmas
+  - Valentine's Day
+  - Mother's Day
+  - Father's Day
+  - Back to School
+  - Corporate Year-End
+  image: ''
+  alt: Seasonal gifting — Ramadan lantern gift
+  placeholder: lantern:champagne:320
+corporate:
+  heading: Gifting That Represents
+  heading_emphasis: Your Brand
+  intro: Endow Crafts designs and produces customized gifting for businesses across Qatar — for clients, teams and events. You'll see and approve every design before production begins.
+  steps:
+  - title: Brief
+    text: Occasion, audience, quantity
+  - title: Concept
+    text: Gift ideas that fit the brief
+  - title: Design
+    text: Your logo and brand applied
+  - title: Approval
+    text: Mock-ups signed off by you
+  - title: Production
+    text: Crafted and quality-checked
+  - title: Delivery
+    text: Packed and delivered on time
+  considerations:
+  - title: Quantity
+    text: From small teams to large events
+  - title: Branding requirements
+    text: Logo, colours, guidelines
+  - title: Budget
+    text: Options at several price points
+  - title: Delivery timeline
+    text: Planned back from your date
+  - title: Packaging
+    text: Boxes, sleeves, cards, ribbons
+  - title: Customization
+    text: Per-name or uniform sets
+  services:
+  - Corporate gift sets
+  - Employee gifts
+  - Client appreciation gifts
+  - Branded merchandise
+  - Event giveaways
+  - Promotional products
+  - Custom packaging
+  - Bulk orders
+  - Company logo personalization
+workshops:
+  heading: Learn. Create.
+  heading_emphasis: Inspire.
+  intro: Endow Crafts runs creative and Cricut-related workshops for beginners, families, schools and teams — hands-on sessions where everyone leaves with something they made.
+  image: ''
+  alt: Paper crafting and Cricut workshop in Qatar
+  placeholder: invite:sand:250
+why:
+  heading: Personal like a handmade gift.
+  heading_emphasis: Dependable like a supplier.
+  items:
+  - icon: personal
+    title: Made Personal
+    text: Every creation can be customized.
+  - icon: purpose
+    title: Designed With Purpose
+    text: We transform ideas into meaningful products.
+  - icon: craft
+    title: Creative Expertise
+    text: Combining handmade creativity with modern crafting technology.
+  - icon: corporate
+    title: Corporate Ready
+    text: Solutions suitable for companies, events and bulk requirements.
+  - icon: qatar
+    title: Qatar Based
+    text: Serving customers and businesses across Qatar.
+  - icon: detail
+    title: Attention To Detail
+    text: Every piece receives careful finishing and quality attention.
+process:
+- title: Tell Us Your Idea
+  text: Share your concept, occasion, theme or requirements.
+- title: We Design
+  text: We develop the personalization and creative direction.
+- title: You Approve
+  text: Review the design before production.
+- title: We Craft
+  text: Your customized order is carefully produced.
+- title: Ready To Gift
+  text: Your finished creation is prepared for collection or delivery.
+contact:
+  heading: Have An Idea?
+  heading_emphasis: Let's Create It.
+  intro: Tell us what you're imagining and we'll help turn it into something personal, memorable and uniquely yours.

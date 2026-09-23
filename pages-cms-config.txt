@@ -1,0 +1,342 @@
+# Pages CMS configuration — this controls the editing dashboard at https://app.pagescms.org
+# Each entry below becomes a menu item for the site owner.
+
+media:
+  input: images
+  output: images
+  categories: [image]
+  rename: safe
+
+components:
+  photo:
+    label: Photo
+    type: image
+    description: "Upload a photo (JPG or WEBP, ideally under 500 KB). Leave empty to show the illustrated placeholder."
+    options:
+      extensions: [jpg, jpeg, png, webp]
+  alt:
+    label: Photo description (for Google & screen readers)
+    type: string
+    description: "Describe what is in the photo in a few words, e.g. 'Engraved crystal award with company logo'."
+  placeholder:
+    label: Placeholder
+    type: string
+    hidden: true
+
+content:
+  # ---------------------------------------------------------------- SETTINGS
+  - name: settings
+    label: Contact & settings
+    description: Phone, email, social links and the text Google shows.
+    type: file
+    path: _data/settings.yml
+    format: yaml
+    fields:
+      - { name: business_name, label: Business name, type: string, required: true }
+      - { name: tagline, label: Tagline (footer), type: string }
+      - { name: registered_name, label: Registered under, type: string }
+      - { name: location, label: Location, type: string }
+      - name: whatsapp_number
+        label: WhatsApp number (digits only)
+        type: string
+        required: true
+        description: "Country code + number, no spaces or +. Example: 97430140637"
+        pattern: { regex: "^[0-9]{8,15}$", message: "Use digits only, including the country code (e.g. 97430140637)." }
+      - { name: phone_display, label: Phone number as shown on the site, type: string, description: "Example: +974 3014 0637" }
+      - { name: email, label: Email, type: string, required: true }
+      - { name: whatsapp_greeting, label: WhatsApp starting message, type: text, description: "Pre-filled text when a visitor taps a WhatsApp button." }
+      - { name: instagram_handle, label: Instagram handle, type: string, description: "Example: @EndowCrafts" }
+      - { name: instagram_url, label: Instagram link, type: string, description: "Full link, e.g. https://www.instagram.com/endowcrafts/ — leave empty until ready." }
+      - { name: facebook_url, label: Facebook link, type: string, description: "Full link — leave empty until ready." }
+      - { name: tiktok_url, label: TikTok link, type: string, description: "Full link — leave empty until ready." }
+      - { name: show_testimonials, label: Show the testimonials section, type: boolean }
+      - { name: seo_title, label: Google title, type: string, description: "The page title shown in Google results and browser tabs (about 60 characters)." }
+      - { name: seo_description, label: Google description, type: text, description: "The short summary shown under the title in Google (about 155 characters)." }
+      - { name: seo_keywords, label: Search keywords, type: text }
+      - { name: copyright, label: Copyright line, type: string }
+
+  # ---------------------------------------------------------------- HOMEPAGE
+  - name: home
+    label: Homepage
+    description: Headlines, introductions and section text.
+    type: file
+    path: _data/home.yml
+    format: yaml
+    fields:
+      - name: hero
+        label: Top of page (hero)
+        type: object
+        fields:
+          - { name: eyebrow, label: Small line above the headline, type: string }
+          - { name: headline, label: Headline, type: string }
+          - { name: headline_emphasis, label: Headline — second line (italic), type: string }
+          - { name: intro, label: Introduction, type: text }
+          - { name: highlights, label: Highlights (small points under the buttons), type: string, list: { max: 3, collapsible: false } }
+          - name: images
+            label: Collage photos (5)
+            description: "Five photos arranged in a collage: 1 tall, 2 wide, 3 square, 4 tall, 5 wide."
+            type: object
+            list: { min: 5, max: 5, collapsible: { collapsed: true, summary: "Photo {index}: {alt}" } }
+            fields:
+              - { name: image, component: photo }
+              - { name: alt, component: alt }
+              - { name: placeholder, component: placeholder }
+          - { name: caption_title, label: Floating caption — title, type: string }
+          - { name: caption_text, label: Floating caption — text, type: string }
+      - name: statement
+        label: '"One special gift" band'
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: heading_emphasis, label: Heading (italic part), type: string }
+          - { name: personal_title, label: Left column title, type: string }
+          - { name: personal_text, label: Left column text, type: text }
+          - { name: business_title, label: Right column title, type: string }
+          - { name: business_text, label: Right column text, type: text }
+      - name: about
+        label: About section
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: heading_emphasis, label: Heading (italic part), type: string }
+          - { name: lead, label: Opening paragraph, type: text }
+          - { name: story, label: Brand story, type: text, description: "Leave an empty line between paragraphs." }
+          - { name: customize_title, label: Customization box — title, type: string }
+          - { name: customize_items, label: Customization box — items, type: string, list: true }
+          - { name: customize_note, label: Customization box — note, type: text }
+          - name: timeline
+            label: Timeline (Idea → Deliver)
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{title}" } }
+            fields:
+              - { name: title, label: Step, type: string }
+              - { name: text, label: Short description, type: string }
+      - { name: services_intro, label: Services — introduction, type: text }
+      - { name: portfolio_intro, label: Portfolio — introduction, type: text }
+      - name: seasonal
+        label: Seasonal block (in Collections)
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: occasions, label: Occasions, type: string, list: true }
+          - { name: image, component: photo }
+          - { name: alt, component: alt }
+          - { name: placeholder, component: placeholder }
+      - name: corporate
+        label: Corporate section
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: heading_emphasis, label: Heading (italic part), type: string }
+          - { name: intro, label: Introduction, type: text }
+          - name: steps
+            label: Process steps
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{title}" } }
+            fields:
+              - { name: title, label: Step, type: string }
+              - { name: text, label: Short description, type: string }
+          - name: considerations
+            label: '"We shape each order around"'
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{title}" } }
+            fields:
+              - { name: title, label: Title, type: string }
+              - { name: text, label: Short note, type: string }
+          - { name: services, label: Corporate services list, type: string, list: true }
+      - name: workshops
+        label: Workshops section (the workshop list is under "Workshops")
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: heading_emphasis, label: Heading (italic part), type: string }
+          - { name: intro, label: Introduction, type: text }
+          - { name: image, component: photo }
+          - { name: alt, component: alt }
+          - { name: placeholder, component: placeholder }
+      - name: why
+        label: Why Endow Crafts
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: heading_emphasis, label: Heading (italic part), type: string }
+          - name: items
+            label: Reasons
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{title}" } }
+            fields:
+              - name: icon
+                label: Icon
+                type: select
+                options:
+                  values:
+                    - { value: personal, label: Tag (personal) }
+                    - { value: purpose, label: Compass (purpose) }
+                    - { value: craft, label: Scissors (craft) }
+                    - { value: corporate, label: Briefcase (corporate) }
+                    - { value: qatar, label: Skyline (Qatar) }
+                    - { value: detail, label: Magnifier (detail) }
+              - { name: title, label: Title, type: string }
+              - { name: text, label: Text, type: text }
+      - name: process
+        label: Our process (5 steps)
+        type: object
+        list: { collapsible: { collapsed: true, summary: "{index}. {title}" } }
+        fields:
+          - { name: title, label: Step, type: string }
+          - { name: text, label: Description, type: text }
+      - name: contact
+        label: Contact section
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: heading_emphasis, label: Heading (italic part), type: string }
+          - { name: intro, label: Introduction, type: text }
+
+  # ---------------------------------------------------------------- PORTFOLIO
+  - name: portfolio
+    label: Portfolio
+    description: The exhibition gallery. Drag pieces to change their order; the first piece is No. 01.
+    type: file
+    path: _data/portfolio.yml
+    format: yaml
+    list: { collapsible: { collapsed: true, summary: "{index}. {title}" } }
+    fields:
+      - { name: title, label: Piece name, type: string, required: true }
+      - { name: image, component: photo }
+      - name: categories
+        label: Categories (filters)
+        type: select
+        options:
+          multiple: true
+          values:
+            - { value: personal, label: Personalized Gifts }
+            - { value: corporate, label: Corporate }
+            - { value: events, label: Events & Parties }
+            - { value: cricut, label: Cricut Creations }
+            - { value: seasonal, label: Seasonal }
+            - { value: qatar, label: Qatar Collection }
+            - { value: kids, label: Kids & School }
+      - { name: materials, label: Materials, type: string, description: "Short, e.g. 'Ceramic · vinyl monogram'" }
+      - { name: description, label: Description, type: text }
+      - { name: options, label: Customization options, type: string, list: true }
+      - { name: occasion, label: Occasion, type: string }
+      - { name: placeholder, component: placeholder }
+
+  # ---------------------------------------------------------------- SERVICES
+  - name: services
+    label: Services
+    description: The four service cards.
+    type: file
+    path: _data/services.yml
+    format: yaml
+    list: { collapsible: { collapsed: true, summary: "{title}" } }
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: eyebrow, label: Small label above the title, type: string }
+      - { name: text, label: Description, type: text }
+      - { name: examples, label: Examples, type: string, list: true }
+      - { name: image, component: photo }
+      - { name: alt, component: alt }
+      - { name: button_text, label: Button text, type: string }
+      - name: button_link
+        label: Button goes to
+        type: select
+        options:
+          values:
+            - { value: "#contact", label: Quote form }
+            - { value: "#corporate", label: Corporate section }
+            - { value: "#portfolio", label: Portfolio }
+            - { value: "#workshops", label: Workshops }
+      - name: form_service
+        label: Pre-select on the quote form (if button goes to the quote form)
+        type: select
+        options:
+          values: ["Personalized Gift", "Corporate Gifting", "Event & Party Favors", "Cricut / Custom Crafting", "Workshop", "Something else"]
+      - name: portfolio_filter
+        label: Portfolio filter to open (if button goes to Portfolio)
+        type: select
+        options:
+          values:
+            - { value: personal, label: Personalized Gifts }
+            - { value: corporate, label: Corporate }
+            - { value: events, label: Events & Parties }
+            - { value: cricut, label: Cricut Creations }
+            - { value: seasonal, label: Seasonal }
+            - { value: qatar, label: Qatar Collection }
+            - { value: kids, label: Kids & School }
+      - { name: highlight, label: Dark highlighted card, type: boolean }
+      - { name: badge, label: Badge (replaces the small label), type: string, description: "e.g. Cricut Brand Ambassador — Qatar" }
+      - { name: note, label: Small print, type: text }
+      - { name: placeholder, component: placeholder }
+
+  # ---------------------------------------------------------------- COLLECTIONS
+  - name: collections
+    label: Collections
+    description: Featured collections. The first two appear larger.
+    type: file
+    path: _data/collections.yml
+    format: yaml
+    list: { collapsible: { collapsed: true, summary: "{title}" } }
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: text, label: Description, type: text }
+      - { name: details, label: Extra details (small text), type: text }
+      - { name: image, component: photo }
+      - { name: alt, component: alt }
+      - name: filter
+        label: '"View pieces" opens this portfolio filter'
+        type: select
+        options:
+          values:
+            - { value: all, label: All }
+            - { value: personal, label: Personalized Gifts }
+            - { value: corporate, label: Corporate }
+            - { value: events, label: Events & Parties }
+            - { value: cricut, label: Cricut Creations }
+            - { value: seasonal, label: Seasonal }
+            - { value: qatar, label: Qatar Collection }
+            - { value: kids, label: Kids & School }
+      - { name: placeholder, component: placeholder }
+
+  # ---------------------------------------------------------------- WORKSHOPS
+  - name: workshops
+    label: Workshops
+    description: Workshop types listed in the Workshops section.
+    type: file
+    path: _data/workshops.yml
+    format: yaml
+    list: { collapsible: { collapsed: true, summary: "{title}" } }
+    fields:
+      - { name: title, label: Workshop name, type: string, required: true }
+      - { name: text, label: Short description, type: text }
+      - { name: audience, label: Audience tag, type: string, description: "e.g. Beginners, All levels, Kids & schools" }
+
+  # ---------------------------------------------------------------- TESTIMONIALS
+  - name: testimonials
+    label: Testimonials
+    description: Only publish real reviews, with the client's permission.
+    type: file
+    path: _data/testimonials.yml
+    format: yaml
+    list: { collapsible: { collapsed: true, summary: "{name}" } }
+    fields:
+      - { name: quote, label: Review, type: text, required: true }
+      - { name: name, label: Client name, type: string }
+      - { name: project, label: Project / occasion, type: string }
+      - { name: placeholder_label, label: 'Show "Placeholder" tag (turn off for real reviews)', type: boolean }
+
+  # ---------------------------------------------------------------- INSTAGRAM
+  - name: instagram
+    label: Instagram grid
+    description: Six photos in the "Follow Our Creative Journey" section.
+    type: file
+    path: _data/instagram.yml
+    format: yaml
+    list: { max: 6, collapsible: { collapsed: true, summary: "Photo {index}: {alt}" } }
+    fields:
+      - { name: image, component: photo }
+      - { name: alt, component: alt }
+      - { name: link, label: Link to the Instagram post (optional), type: string }
+      - { name: placeholder, component: placeholder }

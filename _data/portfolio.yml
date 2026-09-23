@@ -1,0 +1,275 @@
+# Portfolio / exhibition pieces, in display order. Edit in Pages CMS: "Portfolio".
+
+- title: Monogram Ceramic Mug
+  image: ''
+  categories:
+  - personal
+  materials: Ceramic · vinyl monogram
+  description: An everyday mug made personal with a single initial, a name or a short message in the typeface you choose.
+  options:
+  - Initial or full name
+  - Typeface & colour
+  - Short message
+  - Gift box
+  occasion: Birthdays · thank-you gifts · everyday
+  placeholder: mug:sand:520:A
+- title: Engraved Crystal Award
+  image: ''
+  categories:
+  - corporate
+  materials: Crystal · engraved
+  description: A weighted crystal piece for recognition moments, engraved with your logo, the recipient's name and the achievement.
+  options:
+  - Company logo
+  - Recipient name & title
+  - Award wording
+  - Presentation box
+  occasion: Employee recognition · long service · corporate events
+  placeholder: crystal:graphite:600
+- title: Name Tumbler
+  image: ''
+  categories:
+  - personal
+  - cricut
+  materials: Insulated steel · vinyl name
+  description: A tumbler that is unmistakably theirs — name, colour and lettering chosen for the person who'll carry it.
+  options:
+  - Name or initials
+  - Tumbler & lid colour
+  - Font style
+  - Matching straw
+  occasion: Gifts for friends · team gifts · school
+  placeholder: tumbler:teal:480:Maryam
+- title: Birthday Favor Bags
+  image: ''
+  categories:
+  - events
+  - kids
+  materials: Paper bag · personalised label
+  description: Take-home favor bags in your party colours, each labelled with the birthday child's name and a thank-you note.
+  options:
+  - Child's name & age
+  - Party theme colours
+  - Thank-you tag
+  - Filled or empty
+  occasion: Birthdays · kids' parties
+  placeholder: bag:blush:540:Zayd
+- title: Wedding Guest Glassware
+  image: ''
+  categories:
+  - events
+  materials: Glass · etched initials
+  description: Etched glassware for the couple or for every guest, carrying initials, a date or a short line.
+  options:
+  - Couple's initials
+  - Wedding date
+  - Guest names
+  - Gift packaging
+  occasion: Weddings · engagements · anniversaries
+  placeholder: glass:champagne:560
+- title: Branded Welcome Kit
+  image: ''
+  categories:
+  - corporate
+  materials: Gift box · notebook · pen
+  description: A presentation box for new joiners or visiting clients — your logo on the lid, notebook and pen, packed and ready to hand over.
+  options:
+  - Logo placement
+  - Box & insert colour
+  - Contents
+  - Name per recipient
+  occasion: Onboarding · client visits · conferences
+  placeholder: kit:sand:440
+- title: Custom Sticker Sheets
+  image: ''
+  categories:
+  - cricut
+  - kids
+  materials: Printable vinyl · precision cut
+  description: Cut-to-shape stickers and labels for school supplies, packaging or party favors.
+  options:
+  - Shapes & sizes
+  - Names or logos
+  - Colour palette
+  - Quantity per sheet
+  occasion: School · packaging · party favors
+  placeholder: stickers:sage:500
+- title: Initial Cushion
+  image: ''
+  categories:
+  - personal
+  materials: Soft furnishing · heat-transfer print
+  description: A cushion with an initial, a family name or a date — a warm gift for a new home or a new arrival.
+  options:
+  - Initial or name
+  - Cover colour
+  - Short line or date
+  - Cushion size
+  occasion: New home · new baby · anniversaries
+  placeholder: cushion:blush:460:N
+- title: National Day Bunting & Favors
+  image: ''
+  categories:
+  - qatar
+  - seasonal
+  materials: Card & fabric · cut pennants
+  description: Maroon-and-white pennants and matching favors for Qatar National Day at home, school or the office.
+  options:
+  - Names or company logo
+  - Bunting length
+  - Favor contents
+  - Quantity
+  occasion: Qatar National Day · school & office celebrations
+  placeholder: bunting:maroon:520:Qatar
+- title: Doha Skyline Tote
+  image: ''
+  categories:
+  - qatar
+  - personal
+  materials: Canvas · heat-transfer print
+  description: A clean, modern Doha skyline print on canvas — personalise it with a name or keep it simple.
+  options:
+  - Name or initials
+  - Print colour
+  - Tote colour
+  - Gift wrapping
+  occasion: Visitors' gifts · everyday · events
+  placeholder: tote:sand:560
+- title: Kahwa Gift Set
+  image: ''
+  categories:
+  - qatar
+  - seasonal
+  - corporate
+  materials: Dallah & finjan set · gift box
+  description: A coffee-hospitality set inspired by Qatari kahwa traditions, finished with a personalised box or card.
+  options:
+  - Name or logo on box
+  - Card message
+  - Packaging colour
+  - Quantity
+  occasion: Ramadan · Eid · corporate hospitality
+  placeholder: dallah:champagne:480
+- title: Personalized Cake Topper
+  image: ''
+  categories:
+  - events
+  - cricut
+  materials: Glitter card / acrylic · cut
+  description: A cut topper with the name, age or message of the day, matched to your cake and party colours.
+  options:
+  - Wording & name
+  - Material & finish
+  - Colour
+  - Size
+  occasion: Birthdays · weddings · baby showers
+  placeholder: topper:blush:460:Happy 5th
+- title: School Name Set
+  image: ''
+  categories:
+  - kids
+  - cricut
+  materials: Notebook · labels · stickers
+  description: Name labels, notebook covers and stickers so school things always come home.
+  options:
+  - Child's name
+  - Class or grade
+  - Theme & colours
+  - Label quantity
+  occasion: Back to school · class gifts
+  placeholder: notebook:teal:540:Layla
+- title: Ramadan Lantern Gift
+  image: ''
+  categories:
+  - seasonal
+  materials: Lantern · personalised tag
+  description: A lantern gift for the holy month, finished with a greeting and the family's or company's name.
+  options:
+  - Greeting text
+  - Family or company name
+  - Colour finish
+  - Gift box
+  occasion: Ramadan · Eid · corporate seasonal gifting
+  placeholder: lantern:champagne:560
+- title: Team Event T-Shirts
+  image: ''
+  categories:
+  - corporate
+  - cricut
+  materials: Cotton tee · heat-transfer vinyl
+  description: Matching shirts for teams, sports days and events — logo on the front, names or numbers on the back.
+  options:
+  - Logo or artwork
+  - Names & numbers
+  - Shirt colour & sizes
+  - Quantity
+  occasion: Corporate events · sports days · school trips
+  placeholder: shirt:sage:500:TEAM
+- title: Wedding Invitation Suite
+  image: ''
+  categories:
+  - events
+  - cricut
+  materials: Fine card · cut & layered
+  description: Invitations, save-the-dates and place cards designed as one set, in your colours and lettering.
+  options:
+  - Names & wording
+  - Paper & colours
+  - Envelope & seal
+  - Matching place cards
+  occasion: Weddings · engagements
+  placeholder: invite:sand:560
+- title: Eid Gift Box
+  image: ''
+  categories:
+  - seasonal
+  materials: Gift box · ribbon · tag
+  description: A dressed gift box for Eid, with a personal tag and contents chosen for the recipient.
+  options:
+  - Recipient name
+  - Box colour & ribbon
+  - Contents
+  - Greeting card
+  occasion: Eid al-Fitr · Eid al-Adha
+  placeholder: box:sage:460:Eid
+- title: Client Appreciation Box
+  image: ''
+  categories:
+  - corporate
+  - seasonal
+  materials: Rigid box · branded ribbon
+  description: A premium thank-you box for your clients, branded inside and out and packed with pieces they'll keep.
+  options:
+  - Logo & brand colours
+  - Contents
+  - Personal card
+  - Delivery to recipients
+  occasion: Year-end gifting · client appreciation
+  placeholder: box:graphite:520:thank you
+- title: Baby Celebration Favors
+  image: ''
+  categories:
+  - events
+  materials: Favor bag · name label
+  description: Soft, simple favors to welcome a new baby, labelled with the baby's name and a date.
+  options:
+  - Baby's name
+  - Date of birth
+  - Colour palette
+  - Favor contents
+  occasion: Baby showers · welcome-baby celebrations
+  placeholder: bag:teal:500:Adam
+- title: Kids Party Cups
+  image: ''
+  categories:
+  - kids
+  - events
+  materials: Reusable cups · vinyl names
+  description: A cup for every guest with their own name on it — no mix-ups, and a favor they take home.
+  options:
+  - Guest names
+  - Cup colours
+  - Party theme
+  - Quantity
+  occasion: Kids' parties · school events
+  placeholder: cups:blush:440

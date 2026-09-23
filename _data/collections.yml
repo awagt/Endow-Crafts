@@ -1,0 +1,37 @@
+# Featured collections (the seasonal block is under "Homepage"). Edit in Pages CMS: "Collections".
+
+- title: Personalized Everyday
+  text: Mugs, tumblers, shirts, cushions and personalized accessories — the pieces people use every day.
+  details: ''
+  filter: personal
+  image: ''
+  alt: Personalized everyday gifts — mugs and tumblers
+  placeholder: mug:sand:250:M
+- title: Corporate Collection
+  text: Corporate gifts, branded products, employee gifts and event giveaways.
+  details: ''
+  filter: corporate
+  image: ''
+  alt: Corporate gift collection Doha — branded welcome kit
+  placeholder: kit:graphite:250
+- title: Celebration
+  text: Birthday, wedding, baby celebration and party favors.
+  details: ''
+  filter: events
+  image: ''
+  alt: Celebration collection — personalized cake topper
+  placeholder: topper:blush:300
+- title: Qatar Collection
+  text: Modern, elegant gifts inspired by home.
+  details: Qatar flag · Doha skyline · Kahwa & coffee · Qatar National Day · Local motifs · Personalized Qatar-themed gifts
+  filter: qatar
+  image: ''
+  alt: Qatar collection — Doha skyline tote
+  placeholder: tote:maroon:300
+- title: Kids & School
+  text: Personalized school supplies, themed party favors and children's craft products.
+  details: ''
+  filter: kids
+  image: ''
+  alt: Kids and school — personalized notebook and labels
+  placeholder: notebook:teal:300:Layla
