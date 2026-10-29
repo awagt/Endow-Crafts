@@ -1,0 +1,110 @@
+[
+  {
+    "title": "Executive Gift Set",
+    "image": "images/executive-gift-set.webp",
+    "categories": ["corporate"],
+    "material": "Leather notebook · pen · steel flask",
+    "description": "A boxed desk set for clients and senior teams, finished with a crest or company logo.",
+    "options": ["Company logo", "Initials or crest", "Box sleeve", "Gift card"],
+    "occasion": "Client appreciation · Staff awards"
+  },
+  {
+    "title": "Client Appreciation Box",
+    "image": "images/corporate-gift-box.webp",
+    "categories": ["corporate", "seasonal"],
+    "material": "Rigid box · tumbler · notebook · keyring",
+    "description": "A layered welcome or thank-you box with each recipient's name on the tumbler.",
+    "options": ["Per-person names", "Brand colours", "Printed thank-you card", "Ribbon colour"],
+    "occasion": "Year-end gifting · Onboarding"
+  },
+  {
+    "title": "Doha Skyline Set",
+    "image": "images/qatar-collection.webp",
+    "categories": ["qatar", "seasonal", "corporate"],
+    "material": "Mug · tumbler · keyring · card",
+    "description": "Maroon and white pieces drawn from the Doha skyline and Sadu-inspired borders.",
+    "options": ["Name or date", "Company logo", "Arabic or English text", "Dates box"],
+    "occasion": "Qatar National Day · Visitors"
+  },
+  {
+    "title": "Personalized Everyday",
+    "image": "images/personalized-everyday.webp",
+    "categories": ["personal"],
+    "material": "Tote · cushion · mug · tumbler · tee",
+    "description": "Everyday pieces carrying a name, a family or a place that matters.",
+    "options": ["Name or initials", "Font style", "Colour", "Short message"],
+    "occasion": "Birthdays · Housewarming"
+  },
+  {
+    "title": "Engagement Keepsake Box",
+    "image": "images/wedding-keepsake.webp",
+    "categories": ["personal", "events"],
+    "material": "Engraved oak box · etched glass · candle",
+    "description": "A keepsake for the couple, engraved with both names and the date.",
+    "options": ["Couple's names", "Date", "Monogram", "Candle label"],
+    "occasion": "Engagements · Weddings · Anniversaries"
+  },
+  {
+    "title": "Birthday Favor Collection",
+    "image": "images/kids-party-favors.webp",
+    "categories": ["events", "kids"],
+    "material": "Drawstring bags · name cups · treat boxes",
+    "description": "A matching set of named favors for every guest, in the party's own colours.",
+    "options": ["Each guest's name", "Party theme", "Colour palette", "Thank-you tags"],
+    "occasion": "Kids' birthdays · School events"
+  },
+  {
+    "title": "Home & Family Basket",
+    "image": "images/home-gift-basket.webp",
+    "categories": ["personal", "seasonal"],
+    "material": "Woven basket · mugs · tumbler · throw",
+    "description": "A gathered basket for a new home, a new couple or a family celebration.",
+    "options": ["Family name", "Est. date", "Basket contents", "Gift tag"],
+    "occasion": "Housewarming · Eid · Weddings"
+  },
+  {
+    "title": "Engraved Keepsakes",
+    "image": "images/laser-engraving.webp",
+    "categories": ["personal", "corporate"],
+    "material": "Wood · acrylic · leather",
+    "description": "Fine engraving on boxes, keyrings and tags, from a single name to a full logo run.",
+    "options": ["Name or initials", "Logo", "Material", "Quantity"],
+    "occasion": "Keepsakes · Event giveaways"
+  },
+  {
+    "title": "Doha Lettering in Progress",
+    "image": "images/cricut-studio.webp",
+    "categories": ["cricut", "qatar"],
+    "material": "Cut vinyl · Arabic and English lettering",
+    "description": "Detailed lettering cut and weeded by hand, ready to apply to mugs, signs and décor.",
+    "options": ["Arabic or English", "Vinyl colour", "Size", "Surface"],
+    "occasion": "Event décor · Signage"
+  },
+  {
+    "title": "Hand-Finished Hamper",
+    "image": "images/studio-packing.webp",
+    "categories": ["personal", "seasonal"],
+    "material": "Wooden crate · jute · named tag",
+    "description": "Every box is packed, tied and labelled by hand in the studio before it leaves.",
+    "options": ["Recipient's name", "Contents", "Wrapping", "Message card"],
+    "occasion": "Ramadan · Eid · Thank-you"
+  },
+  {
+    "title": "Cricut Workshop Session",
+    "image": "images/cricut-workshop.webp",
+    "categories": ["cricut"],
+    "material": "Mugs · tumblers · vinyl",
+    "description": "A hands-on group session where every guest designs and finishes their own piece.",
+    "options": ["Group size", "Project", "Venue", "Take-home kit"],
+    "occasion": "Team building · Friends · Schools"
+  },
+  {
+    "title": "Name Accessories",
+    "image": "images/everyday-accessories.webp",
+    "categories": ["personal", "kids"],
+    "material": "Apron · bottle · tote · pouch",
+    "description": "Small useful pieces made personal, from a lunch bottle to a make-up pouch.",
+    "options": ["Name", "Font style", "Colour", "Small icon"],
+    "occasion": "Back to school · Mother's Day"
+  }
+]
