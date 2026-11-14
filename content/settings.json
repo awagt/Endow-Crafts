@@ -1,0 +1,5 @@
+{
+  "founder_photo": "",
+  "google_analytics_id": "",
+  "_help": "founder_photo: path to Safra's photo once uploaded, e.g. images/founder.webp. google_analytics_id: your GA4 ID, e.g. G-AB12CD34EF. Leave either empty to switch it off."
+}
